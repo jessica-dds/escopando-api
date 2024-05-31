@@ -33,6 +33,14 @@ Desenvolvido durante o curso Full Stack da Cubos Academy.
 - sucesso / erro
 - token
 
+#### Objetivos gerais 
+
+- Validar username e a senha
+- Buscar o usuário no banco de dados
+- Verificar se a senha informada está correta 
+- Gerar o token de autenticação
+- Retornar os dados do usuário e o token 
+
 ---
 
 ### POST - Cadastro
@@ -43,6 +51,13 @@ Desenvolvido durante o curso Full Stack da Cubos Academy.
 
 #### Dados retornados
 - sucesso / erro
+
+#### Objetivos gerais 
+- Validar username e a senha
+- Verificar se o username já existe no banco de dados
+- Criptografar a senha
+- Cadastrar o usuário ni banco de dados
+- Retornar sucesso ou erro
 
 ---
 
@@ -57,13 +72,19 @@ Desenvolvido durante o curso Full Stack da Cubos Academy.
 - Username
 - Site
 - Bio
-- Email
+- E-mail
 - Telefone
 - Genero
+- Senha
+
+#### Objetivos gerais 
+- Validar o token do usuário
+- Buscar o cadastro do usuário com a informação do token
+- Retornar os dados do usuário
 
 ---
 
-### POST - Perfil
+### PUT - Perfil
 
 #### Dados enviados
 - token (que terá id ou username)
@@ -79,6 +100,15 @@ Desenvolvido durante o curso Full Stack da Cubos Academy.
 #### Dados retornados
 - Sucesso ou erro
 
+#### Objetivos gerais 
+- Validar o token do usuário
+- Buscar o cadastro do usuário com a informação do token
+- Exigir, ao menos, um campo para atualizar
+- Criptografar a senha - se for informada
+- Verificar se o e-mail e o username já existem no bando de dados - se for informado
+- Atualizar o registro do usuário no banco de dados
+- Retornar sucesso ou erro 
+
 ---
 
 ### GET - Postagens
@@ -90,6 +120,7 @@ Desenvolvido durante o curso Full Stack da Cubos Academy.
 #### Dados retornados
 - Postagens []
     - id
+    - texto
     - foi curtido por mim
     - Usuario
         - URL da foto
@@ -102,6 +133,31 @@ Desenvolvido durante o curso Full Stack da Cubos Academy.
         - texto
     - Data
 
+#### Objetivos gerais 
+- Validar o token do usuário
+- Buscar o cadastro do usuário com a informação do token
+- Retornar postagens de outras pessoas
+
+
+---
+
+### POST - Postagens
+
+#### Dados enviados
+- token
+- texto
+- array com fotos
+
+#### Dados retornados
+- Sucesso ou erro
+
+#### Objetivos gerais 
+- Validar o token do usuário
+- Buscar o cadastro do usuário com a informação do token
+- Exigir que seja informado ao menos uma foto no array
+- Cadastrar postagem para o usuário logado
+- Cadastro das fotos da postagem
+- Retornar sucesso ou erro
 
 ---
 
@@ -114,6 +170,14 @@ Desenvolvido durante o curso Full Stack da Cubos Academy.
 #### Dados retornados
 - sucesso ou erro
 
+#### Objetivos gerais 
+- Validar o token do usuário
+- Buscar o cadastro do usuário com a informação do token
+- Buscar o cadastro da postagem com o id informado
+- Verificar se o usuário já curtiu a postagem
+- Cadastrar curtida da postagem no banco de dados
+- Retornar sucesso ou erro 
+
 ---
 
 ### POST - Comentar
@@ -125,6 +189,14 @@ Desenvolvido durante o curso Full Stack da Cubos Academy.
 
 #### Dados retornados
 - sucesso ou erro
+
+#### Objetivos gerais 
+- Validar o token do usuário
+- Buscar o cadastro do usuário com a informação do token
+- Validar o texto
+- Buscar a postagem pelo id informado 
+- Cadastrar comentário no banco de dados
+- Retornar sucesso ou erro
 
 
 
