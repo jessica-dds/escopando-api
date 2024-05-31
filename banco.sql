@@ -1,3 +1,13 @@
+drop table if exists postagem_curtidas;
+
+drop table if exists postagem_comentarios;
+
+drop table if exists postagem_fotos;
+
+drop table if exists postagens;
+
+drop table if exists usuarios;
+
 create table usuarios (
     id serial primary key,
     nome text,
